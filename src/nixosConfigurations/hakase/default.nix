@@ -8,8 +8,7 @@
     globals.outputs.nixosProfiles.desktop.fonts
     globals.outputs.nixosProfiles.desktop.hyprland
     globals.outputs.nixosProfiles.nvidia-gpu
-    globals.outputs.nixosProfiles.sops
-    globals.outputs.nixosProfiles.virtualisation
+    globals.outputs.nixosProfiles.virtualisation.base
     globals.outputs.nixosProfiles.vscode-server
     globals.inputs.home-manager.nixosModules.home-manager
     {
@@ -30,7 +29,6 @@
             globals.outputs.homeProfiles.lang.python
             globals.outputs.homeProfiles.lang.rust
             globals.outputs.homeProfiles.shell.combined
-            globals.outputs.homeProfiles.sops
           ];
         };
       };

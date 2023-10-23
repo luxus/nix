@@ -44,6 +44,9 @@
     sops.url = "github:Mic92/sops-nix";
     sops.inputs.nixpkgs.follows = "nixpkgs";
 
+    arion.url = "github:hercules-ci/arion";
+    arion.inputs.nixpkgs.follows = "nixpkgs";
+
     default-systems.url = "github:nix-systems/default";
 
     flake-root.url = "github:srid/flake-root";
@@ -59,6 +62,7 @@
           allowUnfree = true;
         };
         overlays = [
+          inputs.arion.overlays.default
           inputs.fenix.overlays.default
           inputs.fh.overlays.default
           inputs.neovim-nightly-overlay.overlay
