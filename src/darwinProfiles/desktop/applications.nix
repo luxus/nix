@@ -29,6 +29,7 @@ with builtins // lib; {
     ''
       1password
       adobe-creative-cloud
+      adrive
       alt-tab
       applite
       arc

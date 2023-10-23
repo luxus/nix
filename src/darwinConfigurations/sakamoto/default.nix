@@ -23,6 +23,7 @@
             globals.outputs.homeProfiles.lang.python
             globals.outputs.homeProfiles.lang.rust
             globals.outputs.homeProfiles.shell.combined
+            globals.outputs.homeProfiles.sops
           ];
         };
       };
