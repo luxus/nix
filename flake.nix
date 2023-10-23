@@ -62,6 +62,7 @@
           inputs.fenix.overlays.default
           inputs.fh.overlays.default
           inputs.neovim-nightly-overlay.overlay
+          inputs.sops.overlays.default
         ];
       };
       inherit self inputs;
