@@ -1,0 +1,5 @@
+Host hakase
+  HostName hakase.mck.cn.yousiki.top
+  User yousiki
+  Port 22
+  SetEnv "NIX_LD=/etc/vscode-server-support/ld-linux-x86-64.so.2" "NIX_LD_LIBRARY_PATH=/etc/vscode-server-support"

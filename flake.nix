@@ -41,8 +41,10 @@
     nixos-vscode-server.url = "github:nix-community/nixos-vscode-server";
     nixos-vscode-server.inputs.nixpkgs.follows = "nixpkgs";
 
-    sops.url = "github:Mic92/sops-nix";
-    sops.inputs.nixpkgs.follows = "nixpkgs";
+    agenix.url = "github:ryantm/agenix";
+    agenix.inputs.darwin.follows = "darwin";
+    agenix.inputs.home-manager.follows = "home-manager";
+    agenix.inputs.nixpkgs.follows = "nixpkgs";
 
     arion.url = "github:hercules-ci/arion";
     arion.inputs.nixpkgs.follows = "nixpkgs";
@@ -62,11 +64,11 @@
           allowUnfree = true;
         };
         overlays = [
+          inputs.agenix.overlays.default
           inputs.arion.overlays.default
           inputs.fenix.overlays.default
           inputs.fh.overlays.default
           inputs.neovim-nightly-overlay.overlay
-          inputs.sops.overlays.default
         ];
       };
       inherit self inputs;

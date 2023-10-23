@@ -1,9 +1,3 @@
-Host hakase
-  HostName hakase.mck.cn.yousiki.top
-  User yousiki
-  Port 22
-  SetEnv "NIX_LD=/etc/vscode-server-support/ld-linux-x86-64.so.2" "NIX_LD_LIBRARY_PATH=/etc/vscode-server-support"
-
 Host pku-a0
   HostName lab.ybh1998.space
   User yousiki
@@ -43,3 +37,4 @@ Host pku-b3
   HostName lab2.ybh1998.space
   User yousiki
   Port 27394
+

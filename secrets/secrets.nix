@@ -1,0 +1,18 @@
+let
+  hakase = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGaa+M8jUvK36yvTlKR6L1k2eqNzaiWaQF+J88QDRMiE";
+  yousiki_hakase = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDLgalzbXzscwdHkZVcRMsaSLLFiR3+RDm4ygogApn3msJgkLfAAqdDN7X4GI8JCdRj37mb4RuHBRRpySAk3JrZ1uvyfmE4b5X1RM4e2sK50TUu1YnL1Rs7vY8F4ikylbMG0gfhY3buRCVSewYzmAGiisvAddT/6qEShW0zMq8NImCMX8+9wK86HaMjns3yLOEy8G8SD5dHPyejPdtx06FavxK6AhEXpfT/2HKAjCQkAmZXVosL1YGIRcvHzlQTMxNC0z8SnytwFpxF8jZ0e41RJye/q8sNaYQ29E4xaZuPE7DyegnGgNkGgJvs9FhguaR35o76xyY2QPw/XWNvY3s0du75m15nEW1buWxDL+Ei6zsCgAljL2gyi+PGiKO6Dxe5XVtxtbDgavkDF+CcjjWxzbcLxgDIMHautTKNIq+TvPLgZeESwihwgbw3+yooWB+W+99YVupchmDC2kEMxGstGxTEWB4CBrnKmUusmDBUoEVzA83Rc+zLAz2Dqiubdyc=";
+  yousiki_sakamoto = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC6+1AfALT2gQrr7Qli6Em6nL1Ncst8woR7CoObkPwuPTAu3XtHWAvf4SlMFZQwNMjN9oEiS8f6odE0UQBQoMBvcpnVzd2sKBfenEXgei5qHTSFa3hFpNiCv1Z0dwByh9YHXJXejNs3FuwCOk3TWN4CK9+5QveYNiJ8AnBAOjjZ7VdI5cRP9CrqGuUX5cd41torng1PM8SpxK5j8fHCHtdDrmJ++O1aotNAereyEbI40WlDgodPPQy6rVpkIH9NQ6IM6LcXlmzounjo0obXNsmJ1nVidPbVXSPgBnBI2GuONtRVpg5TVbEjk0kJFI3k0jXSoVFS2x+LbsxkMCtjBAY8RWexbPWYLLPgGtzWifCopDbWL+JqXbIhQVqPWqDEo3kof9/c2h4bknuzi72J8zGV/W7ycKPmytXBmBO1vW3V6SFx7FAMF4fRr401Z8Cuek6bfT/svRzWtWCshryfwjZI8sgcgeBoDUUp1B/WWT2YDaGfdjM01jNjaaDN6PreINU=";
+
+  users = [
+    yousiki_hakase
+    yousiki_sakamoto
+  ];
+
+  systems = [
+    hakase
+  ];
+
+  all = users ++ systems;
+in {
+  "adrive-webdav/envs.age".publicKeys = all;
+}
