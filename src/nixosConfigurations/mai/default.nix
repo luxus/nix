@@ -7,7 +7,7 @@
     globals.outputs.nixosProfiles.base
     globals.outputs.nixosProfiles.desktop.fonts
     globals.outputs.nixosProfiles.desktop.hyprland
-    globals.outputs.nixosProfiles.virtualisation
+    globals.outputs.nixosProfiles.virtualisation.base
     globals.inputs.home-manager.nixosModules.home-manager
     {
       home-manager = {

@@ -4,6 +4,13 @@
   pkgs,
   ...
 }: {
+  # Define a user account. Don't forget to set a password with ‘passwd’.
+  users.users.yousiki = {
+    isNormalUser = true;
+    extraGroups = ["wheel" "sudo" "docker" "podman" "lxd"];
+    shell = pkgs.zsh;
+  };
+
   # Enable ssh.
   services.openssh.enable = true;
   services.openssh.openFirewall = true;
