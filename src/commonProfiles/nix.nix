@@ -33,6 +33,7 @@ with builtins // lib; {
       trusted-substituters = [
         "https://cache.garnix.io"
         "https://hyprland.cachix.org"
+        "https://nichijou.cachix.org"
         "https://nix-community.cachix.org"
         "https://nixpkgs-wayland.cachix.org"
         "https://numtide.cachix.org"
@@ -41,6 +42,7 @@ with builtins // lib; {
       trusted-public-keys = [
         "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
         "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
+        "nichijou.cachix.org-1:rbaTU9nLgVW9BK/HSV41vsag6A7/A/caBpcX+cR/6Ps="
         "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
         "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
         "numtide.cachix.org-1:2ps1kLBUWjxIneOy1Ik6cQjb41X0iXVXeHigGmycPPE="

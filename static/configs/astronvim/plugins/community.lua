@@ -26,9 +26,7 @@ return {
 	{ import = "astrocommunity.remote-development.netman-nvim" },
 	{ import = "astrocommunity.scrolling.cinnamon-nvim" },
 	{ import = "astrocommunity.scrolling.nvim-scrollbar" },
-	{ import = "astrocommunity.split-and-window.minimap-vim" },
 	{ import = "astrocommunity.test.neotest" },
 	{ import = "astrocommunity.utility.neodim" },
 	{ import = "astrocommunity.utility.noice-nvim" },
-	-- { import = "astrocommunity.workflow.hardtime-nvim" },
 }

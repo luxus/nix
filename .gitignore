@@ -1,6 +1,6 @@
 ### Nix ###
 /result
-
+/secrets/**/*.local
 
 ### Emacs ###
 # -*- mode: gitignore; -*-

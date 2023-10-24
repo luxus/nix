@@ -25,12 +25,5 @@
   # Enable xwayland.
   programs.xwayland.enable = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.yousiki = {
-    isNormalUser = true;
-    extraGroups = ["wheel" "sudo" "docker" "lxd"];
-    shell = pkgs.zsh;
-  };
-
   programs.zsh.enable = true;
 }

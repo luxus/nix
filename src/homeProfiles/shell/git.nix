@@ -24,7 +24,6 @@ in {
     extraConfig = {
       pull.rebase = false;
       push.followTags = true;
-      core.editor = "hx";
     };
     inherit ignores;
   };
