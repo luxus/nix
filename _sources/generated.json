@@ -168,35 +168,15 @@
     "pinned": false,
     "src": {
       "name": null,
-      "sha256": "sha256-Y012315InESt5AhVUrl768eG1JJF7RqDACKwtAbeWBc=",
+      "sha256": "sha256-Q2UTkyNsuLtCGdzUKbOAOmDzGOVQfY2EygDa+gxp8bs=",
       "type": "url",
       "url": "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh"
     },
     "version": "latest"
   },
-  "pytorch": {
-    "cargoLocks": null,
-    "date": null,
-    "extract": null,
-    "name": "pytorch",
-    "passthru": null,
-    "pinned": false,
-    "src": {
-      "deepClone": false,
-      "fetchSubmodules": true,
-      "leaveDotGit": false,
-      "name": null,
-      "owner": "pytorch",
-      "repo": "pytorch",
-      "rev": "v2.1.0",
-      "sha256": "sha256-4Ha9hQ+0o+ZQp0QdmtugYfaXSzZIzpA6HFhwWJzVLhk=",
-      "type": "github"
-    },
-    "version": "v2.1.0"
-  },
   "rime-ice": {
     "cargoLocks": null,
-    "date": "2023-10-19",
+    "date": "2023-10-22",
     "extract": null,
     "name": "rime-ice",
     "passthru": null,
@@ -208,10 +188,10 @@
       "name": null,
       "owner": "iDvel",
       "repo": "rime-ice",
-      "rev": "764a0f180ee2fb9a06a37cbb2f62a30677507053",
-      "sha256": "sha256-zs0SFufWUOeCMfKExdfuL5NXLaxewXfJ4mBOS0mVFao=",
+      "rev": "0e843f998f659e6329e38192ceaa60165412abd8",
+      "sha256": "sha256-ZdirhWKq0ZHECyiruooH39od+yoHq/5LZoNSHuu8WPk=",
       "type": "github"
     },
-    "version": "764a0f180ee2fb9a06a37cbb2f62a30677507053"
+    "version": "0e843f998f659e6329e38192ceaa60165412abd8"
   }
 }

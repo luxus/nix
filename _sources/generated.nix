@@ -105,30 +105,19 @@
     version = "latest";
     src = fetchurl {
       url = "https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh";
-      sha256 = "sha256-Y012315InESt5AhVUrl768eG1JJF7RqDACKwtAbeWBc=";
-    };
-  };
-  pytorch = {
-    pname = "pytorch";
-    version = "v2.1.0";
-    src = fetchFromGitHub {
-      owner = "pytorch";
-      repo = "pytorch";
-      rev = "v2.1.0";
-      fetchSubmodules = true;
-      sha256 = "sha256-4Ha9hQ+0o+ZQp0QdmtugYfaXSzZIzpA6HFhwWJzVLhk=";
+      sha256 = "sha256-Q2UTkyNsuLtCGdzUKbOAOmDzGOVQfY2EygDa+gxp8bs=";
     };
   };
   rime-ice = {
     pname = "rime-ice";
-    version = "764a0f180ee2fb9a06a37cbb2f62a30677507053";
+    version = "0e843f998f659e6329e38192ceaa60165412abd8";
     src = fetchFromGitHub {
       owner = "iDvel";
       repo = "rime-ice";
-      rev = "764a0f180ee2fb9a06a37cbb2f62a30677507053";
+      rev = "0e843f998f659e6329e38192ceaa60165412abd8";
       fetchSubmodules = false;
-      sha256 = "sha256-zs0SFufWUOeCMfKExdfuL5NXLaxewXfJ4mBOS0mVFao=";
+      sha256 = "sha256-ZdirhWKq0ZHECyiruooH39od+yoHq/5LZoNSHuu8WPk=";
     };
-    date = "2023-10-19";
+    date = "2023-10-22";
   };
 }

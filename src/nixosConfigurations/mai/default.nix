@@ -8,6 +8,8 @@
     globals.outputs.nixosProfiles.desktop.fonts
     globals.outputs.nixosProfiles.desktop.hyprland
     globals.outputs.nixosProfiles.virtualisation.base
+    globals.outputs.nixosProfiles.secrets
+    globals.outputs.nixosProfiles.virtualisation.base
     globals.inputs.home-manager.nixosModules.home-manager
     {
       home-manager = {
@@ -26,6 +28,7 @@
             globals.outputs.homeProfiles.lang.nix
             globals.outputs.homeProfiles.lang.python
             globals.outputs.homeProfiles.lang.rust
+            globals.outputs.homeProfiles.secrets
             globals.outputs.homeProfiles.shell.combined
           ];
         };
