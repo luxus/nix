@@ -43,6 +43,7 @@ This repository stands on the shoulders of giants:
   - [Ruixi-rebirth/flakes](https://github.com/Ruixi-rebirth/flakes)
   - [rxyhn/yuki](https://github.com/rxyhn/yuki)
   - [Misterio77/nix-config](https://github.com/Misterio77/nix-config)
+  - [linuxmobile/hyprland-dots](https://github.com/linuxmobile/hyprland-dots)
   - and more ...
 - Awesome flake tools
   - [divnix/hive](https://github.com/divnix/hive)
