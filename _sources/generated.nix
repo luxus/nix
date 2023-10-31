@@ -7,13 +7,13 @@
 }: {
   astronvim = {
     pname = "astronvim";
-    version = "v3.37.7";
+    version = "v3.37.8";
     src = fetchFromGitHub {
       owner = "AstroNvim";
       repo = "AstroNvim";
-      rev = "v3.37.7";
+      rev = "v3.37.8";
       fetchSubmodules = false;
-      sha256 = "sha256-BP0Cj9CKg4JJ7s5KWxcydDRLzIv5ppaaM9o82IGGRVU=";
+      sha256 = "sha256-QpH+gUapJb0yRG41qzItfMMr0sw+kNc/qRezQUu5PuI=";
     };
   };
   catppuccin-bat = {

@@ -13,11 +13,11 @@
       "name": null,
       "owner": "AstroNvim",
       "repo": "AstroNvim",
-      "rev": "v3.37.7",
-      "sha256": "sha256-BP0Cj9CKg4JJ7s5KWxcydDRLzIv5ppaaM9o82IGGRVU=",
+      "rev": "v3.37.8",
+      "sha256": "sha256-QpH+gUapJb0yRG41qzItfMMr0sw+kNc/qRezQUu5PuI=",
       "type": "github"
     },
-    "version": "v3.37.7"
+    "version": "v3.37.8"
   },
   "catppuccin-bat": {
     "cargoLocks": null,
