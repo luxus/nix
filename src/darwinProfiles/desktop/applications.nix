@@ -28,22 +28,28 @@ with builtins // lib; {
     pipe
     ''
       1password
+      1password-cli
       adobe-creative-cloud
       adrive
       alt-tab
+      amethyst
       applite
       arc
       baidunetdisk
+      balenaetcher
       bilibili
       clashx
       cloudflare-warp
       cursor
       cyberduck
+      discord
       element
       feishu
+      fig
       firefox
       github
       google-chrome
+      google-drive
       hiddenbar
       iina
       itsycal
@@ -57,6 +63,7 @@ with builtins // lib; {
       microsoft-auto-update
       microsoft-office
       microsoft-remote-desktop
+      miniforge
       monitorcontrol
       mos
       motrix
@@ -64,22 +71,34 @@ with builtins // lib; {
       neteasemusic
       notion
       obs
+      obsidian
+      onyx
       orbstack
+      qfinder-pro
       qq
+      qsync-client
+      qudedup-extract-tool
       raycast
       rectangle
       sioyek
       spotify
+      squirrel
+      stats
+      steam
       surge4
       tailscale
       telegram
+      tencent-lemon
       tencent-meeting
       transmission
+      utm
       virtualbox
       visual-studio-code
       warp
       wechat
       wezterm
+      xpra
+      xquartz
       zed
       zotero
     ''

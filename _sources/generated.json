@@ -13,11 +13,11 @@
       "name": null,
       "owner": "AstroNvim",
       "repo": "AstroNvim",
-      "rev": "v3.37.8",
-      "sha256": "sha256-QpH+gUapJb0yRG41qzItfMMr0sw+kNc/qRezQUu5PuI=",
+      "rev": "v3.37.12",
+      "sha256": "sha256-cC1isyscpvNQ07n/Eb6rlfvuQ/K+7mCjdGJq4m/PUHk=",
       "type": "github"
     },
-    "version": "v3.37.8"
+    "version": "v3.37.12"
   },
   "catppuccin-bat": {
     "cargoLocks": null,
@@ -176,7 +176,7 @@
   },
   "rime-ice": {
     "cargoLocks": null,
-    "date": "2023-10-22",
+    "date": "2023-11-06",
     "extract": null,
     "name": "rime-ice",
     "passthru": null,
@@ -188,10 +188,10 @@
       "name": null,
       "owner": "iDvel",
       "repo": "rime-ice",
-      "rev": "0e843f998f659e6329e38192ceaa60165412abd8",
-      "sha256": "sha256-ZdirhWKq0ZHECyiruooH39od+yoHq/5LZoNSHuu8WPk=",
+      "rev": "77d4d8c4270889ca39b4423f9bf9fc8a35f79fa2",
+      "sha256": "sha256-wh6heVtMSMkzuL4D5Szghm3IyopeNEYzPM/q1Ulsch4=",
       "type": "github"
     },
-    "version": "0e843f998f659e6329e38192ceaa60165412abd8"
+    "version": "77d4d8c4270889ca39b4423f9bf9fc8a35f79fa2"
   }
 }
