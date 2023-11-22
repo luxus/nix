@@ -7,13 +7,13 @@
 }: {
   astronvim = {
     pname = "astronvim";
-    version = "v3.37.12";
+    version = "v3.38.0";
     src = fetchFromGitHub {
       owner = "AstroNvim";
       repo = "AstroNvim";
-      rev = "v3.37.12";
+      rev = "v3.38.0";
       fetchSubmodules = false;
-      sha256 = "sha256-cC1isyscpvNQ07n/Eb6rlfvuQ/K+7mCjdGJq4m/PUHk=";
+      sha256 = "sha256-cxzs52iIkCWkzLk5uoYunbyiher+6ZTyACUT7vxQN6Y=";
     };
   };
   catppuccin-bat = {
@@ -66,15 +66,15 @@
   };
   catppuccin-gitui = {
     pname = "catppuccin-gitui";
-    version = "3c97c7af7247b1e0f4366a4d8fab650bcce54100";
+    version = "39978362b2c88b636cacd55b65d2f05c45a47eb9";
     src = fetchFromGitHub {
       owner = "catppuccin";
       repo = "gitui";
-      rev = "3c97c7af7247b1e0f4366a4d8fab650bcce54100";
+      rev = "39978362b2c88b636cacd55b65d2f05c45a47eb9";
       fetchSubmodules = false;
-      sha256 = "sha256-m6Tjch6A2ZPZ3/muvb/9sEAQUZfjnWqcwyhNVeqPS2c=";
+      sha256 = "sha256-kWaHQ1+uoasT8zXxOxkur+QgZu1wLsOOrP/TL+6cfII=";
     };
-    date = "2023-06-21";
+    date = "2023-11-13";
   };
   catppuccin-starship = {
     pname = "catppuccin-starship";
@@ -110,14 +110,14 @@
   };
   rime-ice = {
     pname = "rime-ice";
-    version = "77d4d8c4270889ca39b4423f9bf9fc8a35f79fa2";
+    version = "db2375b0d9dba21247da4e5dd58c3d36c56c2b5a";
     src = fetchFromGitHub {
       owner = "iDvel";
       repo = "rime-ice";
-      rev = "77d4d8c4270889ca39b4423f9bf9fc8a35f79fa2";
+      rev = "db2375b0d9dba21247da4e5dd58c3d36c56c2b5a";
       fetchSubmodules = false;
-      sha256 = "sha256-wh6heVtMSMkzuL4D5Szghm3IyopeNEYzPM/q1Ulsch4=";
+      sha256 = "sha256-AXUFFa+aJDJm0FsSfsnheJNj2tGMjwNc54BAI0Oojzw=";
     };
-    date = "2023-11-06";
+    date = "2023-11-14";
   };
 }

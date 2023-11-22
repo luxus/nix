@@ -37,7 +37,7 @@ with builtins // lib; {
     (with pkgs; [
       _1password
       cachix
-      clash
+      clash-meta
       code-minimap
       curl
       du-dust

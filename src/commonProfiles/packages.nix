@@ -8,7 +8,7 @@ with builtins // lib; {
   environment.systemPackages =
     (with pkgs; [
       cachix
-      clash
+      clash-meta
       curl
       duf
       eza
