@@ -19,8 +19,8 @@ in {
     enable = true;
     lfs.enable = true;
     delta.enable = true;
-    userName = "yousiki";
-    userEmail = "you.siki@outlook.com";
+    userName = "luxus";
+    userEmail = "luxuspur@gmail.com";
     extraConfig = {
       pull.rebase = false;
       push.followTags = true;
