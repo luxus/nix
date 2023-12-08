@@ -1,12 +1,10 @@
-{globals, ...}: {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ globals, ... }:
+{ config, lib, pkgs, ... }:
 with builtins // lib; {
   fonts.fontDir.enable = true;
   fonts.fonts = with pkgs; [
-    nerdfonts
+    # delugia-code
+    # iosevka
+    (nerdfonts.override { fonts = [ "Monaspace" "VictorMono" "Hack" "JetBrainsMono" ]; })
   ];
 }
