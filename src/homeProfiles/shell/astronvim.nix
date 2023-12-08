@@ -21,13 +21,13 @@ in {
     tree-sitter
   ];
 
-  xdg.configFile."nvim" = {
-    source = sources.astronvim.src;
-    recursive = true;
-  };
+  # xdg.configFile."nvim" = {
+  #   source = sources.astronvim.src;
+  #   recursive = true;
+  # };
 
-  xdg.configFile."nvim/lua/user" = {
-    source = globals.root + /static/configs/astronvim;
-    recursive = true;
-  };
+  # xdg.configFile."nvim/lua/user" = {
+  #   source = globals.root + /static/configs/astronvim;
+  #   recursive = true;
+  # };
 }
