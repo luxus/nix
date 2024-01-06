@@ -17,7 +17,8 @@ with builtins // lib; {
     git
     gitui
     helix
-    mcfly
+    atuin
+    # mcfly
     nix-index
     nvfetcher
     ssh
