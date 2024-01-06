@@ -16,6 +16,7 @@ with builtins // lib; {
     gh
     git
     gitui
+    red
     helix
     atuin
     # mcfly
