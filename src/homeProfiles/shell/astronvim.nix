@@ -15,7 +15,6 @@ in {
     bottom
     gdu
     lazygit
-    nodejs
     python3
     ripgrep
     tree-sitter
