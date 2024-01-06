@@ -52,8 +52,6 @@ with builtins // lib; {
       mosh
       neofetch
       nettools
-      nodejs_21
-      corepack_21
       rclone
       rsync
       statix
