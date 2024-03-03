@@ -1,9 +1,8 @@
-{globals, ...}: {
-  config,
-  lib,
-  pkgs,
-  ...
-}:
+{ globals, ... }: { config
+                  , lib
+                  , pkgs
+                  , ...
+                  }:
 with builtins // lib; {
   imports = with globals.outputs.homeProfiles.shell; [
     astronvim
@@ -20,32 +19,42 @@ with builtins // lib; {
     helix
     atuin
     # mcfly
-    nix-index
-    nvfetcher
+    # nix-index
+    # nvfetcher
     ssh
     starship
     tmux
     zoxide
-    zsh
+    # zsh
+    zsh4humans
   ];
 
-  programs.htop.enable = true;
-  programs.jq.enable = true;
-  programs.lazygit.enable = true;
-  programs.ripgrep.enable = true;
-  programs.vim.enable = true;
-
+  programs = {
+    htop.enable = true;
+    jq.enable = true;
+    direnv.enable = true;
+    lazygit.enable = true;
+    ripgrep.enable = true;
+    vim.enable = true;
+  };
   home.packages =
     (with pkgs; [
       _1password
       cachix
       clash-meta
+      nix-tree
+      jujutsu
+      wezterm
       code-minimap
       curl
+      comma
+      yazi
       du-dust
       duf
       fd
       fh
+      nix-index
+      devenv
       gdu
       home-manager
       mc
@@ -59,6 +68,9 @@ with builtins // lib; {
       unzip
       wget
       zip
+      sqlite
+      cht-sh
+      turso-cli
     ])
     ++ (optionals pkgs.stdenv.isLinux (with pkgs; [
       cloudflare-warp

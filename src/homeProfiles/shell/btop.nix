@@ -8,7 +8,7 @@
   catppuccin-src = sources.catppuccin-btop.src;
 in {
   programs.btop = {
-    enable = true;
+    enable = false;
     settings.color_scheme = "catppuccin-mocha";
   };
 

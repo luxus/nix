@@ -5,7 +5,7 @@
   ...
 }: {
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.yousiki = {
+  users.users.luxus = {
     isNormalUser = true;
     extraGroups = ["wheel" "sudo" "docker" "podman" "lxd"];
     shell = pkgs.zsh;
@@ -31,7 +31,7 @@
     }
   ];
 
-  time.timeZone = "Asia/Shanghai";
+  time.timeZone = "Europe/Zurich";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -54,7 +54,7 @@
   # };
 
   services.xserver = {
-    layout = "cn";
+    layout = "en";
     xkbVariant = "";
   };
 

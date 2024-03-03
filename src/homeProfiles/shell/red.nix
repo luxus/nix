@@ -1,23 +1,29 @@
-{globals, ...}: {
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
+{ globals, ... }: { config
+                  , lib
+                  , pkgs
+                  , ...
+                  }: {
   home.packages = with pkgs; [
-
     exiftool
     inetutils
-    # aircrack-ng #no darwin
-    thc-hydra
-    openvpn
-    john
-    metasploit
+    wafw00f
+    # theharvester pypeter broken
+    hashcat
+    hashcat-utils
+    thc-hydra # openvpn
+    # john
+    # metasploit nokogiri broken
+
     wireshark
     sqlmap
     poppler_utils #pdfinfo
     ffuf
     dirb
+    rustscan
     nmap
+    # mimikatz
+    # bloodhound
+    # aircrack-ng #no darwin
+    # burpsuite via brew
   ];
 }

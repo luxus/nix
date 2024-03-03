@@ -14,6 +14,7 @@ in {
   home.packages = with pkgs; [
     bottom
     gdu
+    nodejs_21
     lazygit
     python3
     ripgrep

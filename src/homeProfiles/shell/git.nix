@@ -24,6 +24,8 @@ in {
     extraConfig = {
       pull.rebase = false;
       push.followTags = true;
+      rerere.enabled = true;
+      core.fsmonitor = true; 
     };
     inherit ignores;
   };
