@@ -22,7 +22,8 @@
       jq
       man
       neofetch
-      nodejs
+      nodejs_21
+      nettools
       nvfetcher
       ripgrep
       rsync
@@ -34,7 +35,7 @@
       globals.outputs.packages.${pkgs.system}.lporg
     ]);
 
-  programs.fish.enable = true;
-  programs.tmux.enable = true;
+  programs.fish.enable = false;
+  programs.tmux.enable = false;
   programs.zsh.enable = true;
 }

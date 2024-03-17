@@ -7,8 +7,9 @@
       root = ./.;
       nixpkgs.overlays = with inputs; [
         fenix.overlays.default
+        devenv.overlays.default
         nvfetcher.overlays.default
-        sops-nix.overlays.default
+       neovim-nightly-overlay.overlays.default
       ];
       nixpkgs.config = {
         allowUnfree = true;
@@ -93,7 +94,10 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    neovim-nightly-overlay.inputs.nixpkgs.follows = "nixpkgs";
+    devenv.url = "github:cachix/devenv";
+    devenv.inputs.nixpkgs.follows = "nixpkgs";
     darwin.url = "github:LnL7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -134,24 +138,20 @@
       # "https://cache.garnix.io?priority=50"
       "https://cache.nixos.org?priority=45"
       "https://hyprland.cachix.org?priority=40"
-      "https://mirror.sjtu.edu.cn/nix-channels/store?priority=25"
-      "https://mirrors.cqupt.edu.cn/nix-channels/store?priority=35"
-      "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=30"
-      "https://mirrors.ustc.edu.cn/nix-channels/store?priority=35"
-      "https://nichijou.cachix.org?priority=40"
       "https://nix-community.cachix.org?priority=40"
       "https://nixpkgs-wayland.cachix.org?priority=40"
       "https://numtide.cachix.org?priority=40"
+      "https://devenv.cachix.org"
     ];
     trusted-substituters = substituters;
     trusted-public-keys = [
       "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g="
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
       "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="
-      "nichijou.cachix.org-1:rbaTU9nLgVW9BK/HSV41vsag6A7/A/caBpcX+cR/6Ps="
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
       "nixpkgs-wayland.cachix.org-1:3lwxaILxMRkVhehr5StQprHdEo4IrE8sRho9R9HOLYA="
       "numtide.cachix.org-1:2ps1kLBUWjxIneOy1Ik6cQjb41X0iXVXeHigGmycPPE="
+      "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
     ];
   };
 }

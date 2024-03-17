@@ -33,7 +33,7 @@ in {
         "macchiato"
         "mocha"
       ];
-      default = "latte";
+      default = "mocha";
       description = ''
         The color scheme to use for catppuccin theme.
       '';
