@@ -1,18 +1,16 @@
+{ inputs, cell }:
 {
-  inputs,
-  cell,
-}: {
   config,
   pkgs,
   lib,
   ...
-}: let
+}:
+let
   l = builtins // lib;
-in {
+in
+{
   home.homeDirectory = l.mkDefault (
-    if pkgs.stdenv.isDarwin
-    then "/Users/${config.home.username}"
-    else "/home/${config.home.username}"
+    if pkgs.stdenv.isDarwin then "/Users/${config.home.username}" else "/home/${config.home.username}"
   );
 
   home.stateVersion = "23.05";

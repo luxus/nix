@@ -1,18 +1,15 @@
-{
-  inputs,
-  cell,
-}: let
+{ inputs, cell }:
+let
   inherit (inputs) std nixpkgs;
-in {
+in
+{
   treefmt = std.lib.dev.mkNixago std.lib.cfg.treefmt {
     data = {
-      global.excludes = [
-        "nvfetcher/generated.*"
-      ];
+      global.excludes = [ "nvfetcher/generated.*" ];
       formatter = {
         nix = {
-          command = "alejandra";
-          includes = ["*.nix"];
+          command = "nixfmt";
+          includes = [ "*.nix" ];
         };
         prettier = {
           command = "prettier";
@@ -26,7 +23,7 @@ in {
     };
 
     packages = [
-      inputs.nixpkgs.alejandra
+      inputs.nixpkgs.nixfmt-rfc-style
       inputs.nixpkgs.nodePackages.prettier
     ];
   };

@@ -1,15 +1,11 @@
-{
-  inputs,
-  cell,
-}: {
-  pkgs,
-  lib,
-  ...
-}: let
+{ inputs, cell }:
+{ pkgs, lib, ... }:
+let
   l = builtins // lib;
 
   flake = import "${inputs.self}/flake.nix";
-in {
+in
+{
   # Basic nix configuration for both NixOS and Darwin.
   nix = {
     settings = {
@@ -18,7 +14,10 @@ in {
       # Nix will instruct remote build machines to use their own binary substitutes if available.
       builders-use-substitutes = true;
       # Experimental nix features.
-      experimental-features = ["flakes" "nix-command"];
+      experimental-features = [
+        "flakes"
+        "nix-command"
+      ];
       # Nix will fall back to building from source if a binary substitute fails.
       fallback = true;
       # The garbage collector will keep the derivations from which non-garbage store paths were built.
@@ -28,7 +27,11 @@ in {
       # Builds will be performed in a sandboxed environment on Linux.
       sandbox = pkgs.stdenv.isLinux;
       # These users will have additional rights when connecting to the Nix daemon.
-      trusted-users = ["root" "@wheel" "@admin"];
+      trusted-users = [
+        "root"
+        "@wheel"
+        "@admin"
+      ];
       # Never warn about dirty Git/Mercurial trees.
       warn-dirty = false;
       # Substituters and public keys.
@@ -45,16 +48,18 @@ in {
       "home-manager=flake:home-manager"
     ];
 
-    registry =
-      l.mapAttrs
-      (n: v: {flake = v;})
-      (l.removeAttrs inputs ["nixpkgs" "cells" "self"]);
+    registry = l.mapAttrs (n: v: { flake = v; }) (
+      l.removeAttrs inputs [
+        "nixpkgs"
+        "cells"
+        "self"
+      ]
+    );
   };
 
   # Basic packages for both NixOS and Darwin.
   environment.systemPackages = with pkgs; [
     agenix
-    alejandra
     cachix
     cloudflared
     colmena
@@ -63,35 +68,27 @@ in {
     direnv
     du-dust
     duf
-    eza
     fd
-    fzf
     gdu
     gh
     git
-    helix
     home-manager
     htop
     jq
     man
-    mc
     neofetch
-    nodejs
+    corepack_21
+    nodejs_21
+    nettools
+    doggo
     nvfetcher
     ouch
     rclone
     ripgrep
     rsync
-    statix
-    thefuck
-    tmux
-    vim
     wget
-    yazi
-    zellij
-    zoxide
   ];
 
-  programs.fish.enable = true;
+  programs.fish.enable = false;
   programs.zsh.enable = true;
 }

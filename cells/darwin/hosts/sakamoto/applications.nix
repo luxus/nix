@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   # Homebrew casks.
   homebrew.casks = [
     "1password"

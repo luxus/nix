@@ -11,7 +11,7 @@ pkgs.buildGoModule rec {
   vendorHash = "sha256-k4xB/jO78VGD+n9HtuoWXoXB+kZCEyPKJTTwj32nGIw=";
 
   # Do not build testing suit
-  excludedPackages = ["./test"];
+  excludedPackages = [ "./test" ];
 
   ldflags = [
     "-s"
@@ -19,9 +19,7 @@ pkgs.buildGoModule rec {
     "-X github.com/MetaCubeX/mihomo/constant.Version=${version}"
   ];
 
-  tags = [
-    "with_gvisor"
-  ];
+  tags = [ "with_gvisor" ];
 
   # network required
   doCheck = false;
@@ -35,7 +33,7 @@ pkgs.buildGoModule rec {
     homepage = "https://github.com/MetaCubeX/mihomo";
     changelog = "https://github.com/MetaCubeX/mihomo/releases/tag/${version}";
     mainProgram = "clash-meta";
-    license = with licenses; [gpl3Only];
-    maintainers = with maintainers; [yousiki];
+    license = with licenses; [ gpl3Only ];
+    maintainers = with maintainers; [ yousiki ];
   };
 }

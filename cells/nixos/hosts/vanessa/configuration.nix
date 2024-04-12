@@ -13,5 +13,5 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "hakase";
+  networking.hostName = "vanessa";
 }

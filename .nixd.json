@@ -1,0 +1,1 @@
+{"eval":{"depth":10,"target":{"args":["--expr","with import <nixpkgs> { }; callPackage ./cells/common/packages/ { }"],"installable":""}},"formatting":{"command":"nixfmt"},"options":{"enable":true,"target":{"args":[],"installable":".#homeConfigurations.emily.options"}}}

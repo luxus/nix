@@ -1,11 +1,6 @@
+{ inputs, cell }:
+{ pkgs, config, ... }:
 {
-  inputs,
-  cell,
-}: {
-  pkgs,
-  config,
-  ...
-}: {
   imports = [
     inputs.cells.nixos.nixosModules.clash-meta
     inputs.cells.nixos.nixosModules.cloudflare-warp

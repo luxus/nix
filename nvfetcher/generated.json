@@ -1,7 +1,7 @@
 {
     "catppuccin-bat": {
         "cargoLocks": null,
-        "date": "2024-03-14",
+        "date": "2024-04-09",
         "extract": null,
         "name": "catppuccin-bat",
         "passthru": null,
@@ -13,11 +13,11 @@
             "name": null,
             "owner": "catppuccin",
             "repo": "bat",
-            "rev": "b19bea35a85a32294ac4732cad5b0dc6495bed32",
-            "sha256": "sha256-POoW2sEM6jiymbb+W/9DKIjDM1Buu1HAmrNP0yC2JPg=",
+            "rev": "b8134f01b0ac176f1cf2a7043a5abf5a1a29457b",
+            "sha256": "sha256-gzf0/Ltw8mGMsEFBTUuN33MSFtUP4xhdxfoZFntaycQ=",
             "type": "github"
         },
-        "version": "b19bea35a85a32294ac4732cad5b0dc6495bed32"
+        "version": "b8134f01b0ac176f1cf2a7043a5abf5a1a29457b"
     },
     "catppuccin-bottom": {
         "cargoLocks": null,
@@ -141,7 +141,7 @@
     },
     "rime-ice": {
         "cargoLocks": null,
-        "date": "2024-04-06",
+        "date": "2024-04-10",
         "extract": null,
         "name": "rime-ice",
         "passthru": null,
@@ -153,10 +153,10 @@
             "name": null,
             "owner": "iDvel",
             "repo": "rime-ice",
-            "rev": "c9a2d01eb8ccbbdee571d7313e9b0ba21b198e2f",
-            "sha256": "sha256-I6R9cCCfxKMNBR0WOw8kcegJNjqlz80vd8SGaQfbhvs=",
+            "rev": "83aa7087e2862adc66bc25604a42e461178e8a47",
+            "sha256": "sha256-53/EbA7UOb3jGfMYNNcMU8g4aDTDqxHujdleHerTphI=",
             "type": "github"
         },
-        "version": "c9a2d01eb8ccbbdee571d7313e9b0ba21b198e2f"
+        "version": "83aa7087e2862adc66bc25604a42e461178e8a47"
     }
 }

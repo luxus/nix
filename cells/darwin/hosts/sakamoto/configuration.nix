@@ -3,7 +3,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   networking.hostName = "sakamoto";
   networking.computerName = "YouSikiMacBookPro";
 

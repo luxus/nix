@@ -1,16 +1,16 @@
+{ inputs, cell }:
+{ pkgs, ... }:
 {
-  inputs,
-  cell,
-}: {pkgs, ...}: {
-  imports = [
-    inputs.cells.common.commonProfiles.core
-  ];
+  imports = [ inputs.cells.common.commonProfiles.core ];
 
-  time.timeZone = "Asia/Shanghai";
+  time.timeZone = "Europe/Zurich";
 
-  users.users.yousiki = {
+  users.users.luxus = {
     isNormalUser = true;
-    extraGroups = ["wheel" "docker"];
+    extraGroups = [
+      "wheel"
+      "docker"
+    ];
     shell = pkgs.zsh;
   };
 
@@ -31,7 +31,7 @@
   environment.systemPackages = with pkgs; [
     docker-compose
     podman-compose
-    inputs.cells.common.packages.clash-meta
+    # inputs.cells.common.packages.clash-meta
     inputs.cells.nixos.packages.cloudflare-warp
   ];
 

@@ -1,22 +1,14 @@
 # project. It solves the vital problem of, "works on my machine."
+{ inputs, cell }:
 {
-  inputs,
-  cell,
-}: {
   default = inputs.std.lib.dev.mkShell {
-    name = "nichijou";
+    name = "luxus";
 
-    imports = [
-      inputs.std.std.devshellProfiles.default
-    ];
+    imports = [ inputs.std.std.devshellProfiles.default ];
 
-    packages = [
-      (inputs.nixpkgs.extend inputs.nvfetcher.overlays.default).nvfetcher
-    ];
+    packages = [ (inputs.nixpkgs.extend inputs.nvfetcher.overlays.default).nvfetcher ];
 
-    nixago = [
-      cell.configs.treefmt
-    ];
+    nixago = [ cell.configs.treefmt ];
 
     commands = [
       {

@@ -1,10 +1,7 @@
+{ inputs, cell }:
+{ ... }:
 {
-  inputs,
-  cell,
-}: {...}: {
-  imports = [
-    inputs.nixos-vscode-server.nixosModules.default
-  ];
+  imports = [ inputs.nixos-vscode-server.nixosModules.default ];
 
   services.vscode-server.enable = true;
 }
