@@ -2,12 +2,11 @@
   description = "Personal nix configurations";
 
   outputs =
-    {
-      self,
-      hive,
-      std,
-      nixpkgs,
-      ...
+    { self
+    , hive
+    , std
+    , nixpkgs
+    , ...
     }@inputs:
     let
       collect = hive.collect // {
@@ -89,6 +88,8 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs";
+    nixpkgs-nixos.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-darwin.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     darwin = {
       url = "github:LnL7/nix-darwin";
