@@ -1,13 +1,12 @@
-{
-  inputs,
-  cell,
-  lib,
+{ inputs
+, cell
+, lib
+,
 }:
-{
-  pkgs,
-  config,
-  lib,
-  ...
+{ pkgs
+, config
+, lib
+, ...
 }:
 let
   fzf-preview =
@@ -191,6 +190,8 @@ with builtins // lib;
 
     nix-index.enable = true;
     thefuck.enable = true;
+    fd.enable = true;
+    bun.enable = true;
 
     starship = {
       enable = true;
@@ -412,7 +413,6 @@ with builtins // lib;
     packages = with pkgs; [
       cachix
       du-dust
-      fd
       gdu
       home-manager
       mc
@@ -425,8 +425,11 @@ with builtins // lib;
       odt2txt
       delta
       github-copilot-cli
+      pueue
+      zenith
       nixpkgs-fmt
-      nodejs_21
+      markdown-oxide
+      nodejs_22
       devenv
     ];
   };

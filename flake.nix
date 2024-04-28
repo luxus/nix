@@ -111,6 +111,7 @@
     };
 
     std.follows = "hive/std";
+    ghostty.url = "github:clo4/ghostty-hm-module";
 
     nixago = {
       url = "github:nix-community/nixago";

@@ -77,8 +77,7 @@ in
     jq
     man
     neofetch
-    corepack_21
-    nodejs_21
+    nodejs_22
     nettools
     doggo
     nvfetcher

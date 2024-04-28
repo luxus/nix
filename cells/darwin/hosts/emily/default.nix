@@ -24,6 +24,7 @@
           inputs.cells.home.homeProfiles.shell
           inputs.cells.home.homeProfiles.aerospace
           inputs.cells.home.homeProfiles.wezterm
+          inputs.cells.home.homeProfiles.ghostty
           inputs.cells.home.homeProfiles.astronvim
           inputs.cells.home.homeProfiles.kitty
           inputs.cells.home.homeProfiles.redteam
@@ -47,7 +48,7 @@
     system = "aarch64-darwin";
     darwin = inputs.darwin;
     home = inputs.home-manager;
-    pkgs = import inputs.nixpkgs {
+    pkgs = import inputs.nixpkgs-darwin {
       inherit system;
       config = {
         allowUnfree = true;

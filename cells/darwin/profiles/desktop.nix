@@ -22,7 +22,7 @@ in
 with builtins // lib;
 {
   services.sketchybar = {
-    enable = true;
+    enable = false;
     config =
       # bash
       ''

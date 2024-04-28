@@ -1,9 +1,8 @@
 { globals, ... }:
-{
-  config,
-  lib,
-  pkgs,
-  ...
+{ config
+, lib
+, pkgs
+, ...
 }:
 let
   sources = pkgs.callPackage (globals.root + /_sources/generated.nix) { };
@@ -20,15 +19,16 @@ in
 
   home = {
     sessionVariables = {
-    #   EDITOR = "nvim";
+      #   EDITOR = "nvim";
       VISUAL = "nvim";
     };
     packages = with pkgs; [
       go
       gdu
       libgit2
-      nodejs_21
+      nodejs_22
       python3
+      vale
       ripgrep
       tree-sitter
       nixd

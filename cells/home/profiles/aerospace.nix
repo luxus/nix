@@ -1,9 +1,8 @@
 { globals, ... }:
-{
-  config,
-  lib,
-  pkgs,
-  ...
+{ config
+, lib
+, pkgs
+, ...
 }:
 let
   tomlFormat = pkgs.formats.toml { };
@@ -21,9 +20,12 @@ let
     "2"
     "3"
     "4"
-  ];
+  ] ++ letters;
 in
 {
+  services.espanso = {
+    enable = false;
+  };
   home = {
     file = {
       ".config/aerospace/aerospace.toml".source = gen {
@@ -31,11 +33,12 @@ in
         after-startup-command = [
           "exec-and-forget ${pkgs.jankyborders}/bin/borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0"
         ];
-        exec-on-workspace-change = [
-          "/bin/bash"
-          "-c"
-          "${pkgs.sketchybar}/bin/sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
-        ];
+
+        # exec-on-workspace-change = [
+        #   "/bin/bash"
+        #   "-c"
+        #   "${pkgs.sketchybar}/bin/sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
+        # ];
         on-window-detected = [
           {
             "if" = {
@@ -43,29 +46,34 @@ in
             }; # mnemonics W - Web Browser
             run = "move-node-to-workspace W";
           }
+          {
+            "if" = {
+              app-id = "net.kovidgoyal.kitty";
+            }; # mnemonics T - Terminal
+            run = "move-node-to-workspace T";
+          }
         ];
-        # on-window-detected = {
-        #   app-id = "net.kovidgoyal.kitty";
-        #   run = "move-node-to-workspace T"; # mnemonics T - Terminal
-        # };
         gaps = {
           inner.horizontal = 10;
           inner.vertical = 10;
           outer = {
             left = 2;
             bottom = 2;
-            top = 20;
+            top = 0;
             right = 2;
           };
         };
         mode = {
           main.binding =
-            (lib.foldl' (
-              acc: key:
-              acc
-              // (makeCommands "alt" key "workspace {key}")
-              // (makeCommands "alt-shift" key "move-node-to-workspace {key}")
-            ) { } keys)
+            (lib.foldl'
+              (
+                acc: key:
+                  acc
+                  // (makeCommands "alt" key "workspace {key}")
+                  // (makeCommands "alt-shift" key "move-node-to-workspace {key}")
+              )
+              { }
+              keys)
             // {
               alt-enter = "exec-and-forget open -n ${pkgs.kitty}/Applications/kitty.app";
               cmd-h = [ ];
