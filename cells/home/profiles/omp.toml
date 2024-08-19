@@ -1,0 +1,114 @@
+"$schema" = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+  final_space = true
+version = 2
+console_title_template = " {{.Folder}}{{if .Root}} :: root{{end}}@{{.HostName}} :: {{.Shell}}"
+[[blocks]]
+alignment = "left"
+type = "prompt"
+
+  [[blocks.segments]]
+  background = "#003543"
+  foreground = "#00c983"
+  leading_diamond = ""
+  style = "diamond"
+  template = "{{ .Icon }} {{ .HostName }} "
+  type = "os"
+
+  [[blocks.segments]]
+  background = "#DA627D"
+  foreground = "#ffffff"
+  powerline_symbol = ""
+  style = "powerline"
+  template = " <#000> </> {{ .Path }} "
+  type = "path"
+
+    [blocks.segments.properties]
+    folder_icon = ""
+    folder_separator_icon = "\\"
+    home_icon = ""
+    style = "full"
+
+  [[blocks.segments]]
+  background = "#FCA17D"
+  foreground = "#ffffff"
+  powerline_symbol = ""
+  style = "powerline"
+  template = " ➜ ({{ .UpstreamIcon }}{{ .HEAD }}{{ if gt .StashCount 0 }}  {{ .StashCount }}{{ end }}) "
+  type = "git"
+
+    [blocks.segments.properties]
+    branch_icon = " <#ffffff> </>"
+    fetch_stash_count = true
+    fetch_status = false
+    fetch_upstream_icon = true
+
+  [[blocks.segments]]
+  background = "#76b367"
+  foreground = "#ffffff"
+  powerline_symbol = ""
+  style = "powerline"
+  template = " 🥟 {{ .Full }} "
+  type = "bun"
+
+  [[blocks.segments]]
+  background = "#76b367"
+  foreground = "#ffffff"
+  powerline_symbol = ""
+  style = "powerline"
+  template = "  {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} "
+  type = "node"
+
+  [[blocks.segments]]
+  background = "#83769c"
+  foreground = "#ffffff"
+  powerline_symbol = ""
+  style = "powerline"
+  template = "  {{ .FormattedMs }} "
+  type = "executiontime"
+
+    [blocks.segments.properties]
+    always_enabled = true
+
+  [[blocks.segments]]
+  background = "#33658A"
+  foreground = "#ffffff"
+  powerline_symbol = ""
+  style = "powerline"
+  template = "  {{ .CurrentDate | date .Format }} "
+  type = "time"
+
+    [blocks.segments.properties]
+    time_format = "3:04 PM"
+
+  [[blocks.segments]]
+  background = "#2e9599"
+  background_templates = [ "{{ if gt .Code 0 }}red{{ end }}" ]
+  foreground = "#ffffff"
+  powerline_symbol = ""
+  style = "diamond"
+  template = " {{ if gt .Code 0 }}{{ else }}{{ end }} "
+  trailing_diamond = ""
+  type = "status"
+
+    [blocks.segments.properties]
+    always_enabled = true
+
+[[blocks]]
+alignment = "left"
+newline = true
+type = "prompt"
+
+  [[blocks.segments]]
+  foreground = "#cd5e42"
+  style = "plain"
+  template = " "
+  type = "root"
+
+  [[blocks.segments]]
+  foreground = "#CD4277"
+  style = "plain"
+  template = " <#45F1C2><b>⚡</b></><b>{{ .UserName }}</b> <#26C6DA>❯</><#45F1C2>❯</>"
+  type = "text"
+[transient_prompt]
+  template = "<#26C6DA>❯</><#45F1C2>❯</>"
+

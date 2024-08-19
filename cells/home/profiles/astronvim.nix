@@ -1,6 +1,7 @@
 { globals, ... }:
 { config
 , lib
+, inputs
 , pkgs
 , ...
 }:
@@ -14,7 +15,8 @@ in
     viAlias = true;
     vimAlias = true;
 
-    package = pkgs.neovim-nightly;
+    # package = pkgs.neovim;
+    package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
   };
 
   home = {
@@ -23,7 +25,11 @@ in
       VISUAL = "nvim";
     };
     packages = with pkgs; [
+      jdk22
       go
+      vale
+      luajitPackages.tiktoken_core
+      luajitPackages.luarocks
       gdu
       libgit2
       nodejs_22

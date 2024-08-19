@@ -1,7 +1,7 @@
-{
-  inputs,
-  cell,
-  lib,
+{ inputs
+, cell
+, lib
+,
 }:
 { pkgs, config, ... }:
 {
@@ -12,9 +12,9 @@
     btop = {
       catppuccin.enable = true;
     };
-    delta = {
-      catppuccin.enable = true;
-    };
+    # delta = {
+    #   catppuccin.enable = true;
+    # };
     bat = {
       catppuccin.enable = true;
     };

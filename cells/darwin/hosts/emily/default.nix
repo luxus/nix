@@ -12,6 +12,7 @@
     inputs.cells.darwin.darwinProfiles.core
     inputs.cells.darwin.darwinProfiles.homebrew
     inputs.cells.darwin.darwinProfiles.desktop
+    # inputs.cells.darwin.darwinProfiles.wm
 
     inputs.cells.home.homeProfiles.base
 
@@ -23,11 +24,12 @@
           inputs.cells.home.homeProfiles.languages
           inputs.cells.home.homeProfiles.shell
           inputs.cells.home.homeProfiles.aerospace
-          inputs.cells.home.homeProfiles.wezterm
+          # inputs.cells.home.homeProfiles.heimdall
+          # inputs.cells.home.homeProfiles.wezterm
           inputs.cells.home.homeProfiles.ghostty
           inputs.cells.home.homeProfiles.astronvim
           inputs.cells.home.homeProfiles.kitty
-          inputs.cells.home.homeProfiles.redteam
+          # inputs.cells.home.homeProfiles.redteam
           # inputs.cells.home.homeProfiles.ssh
           inputs.catppuccin.homeManagerModules.catppuccin
         ];
@@ -40,7 +42,7 @@
           # "rust"
         ];
 
-        catppuccin.flavour = "mocha";
+        # catppuccin.flavour = "mocha";
       };
     }
   ];
@@ -55,6 +57,7 @@
       };
       overlays = [
         inputs.agenix.overlays.default
+        inputs.sops-nix.overlays.default
         inputs.neovim-nightly-overlay.overlays.default
         inputs.devenv.overlays.default
         inputs.colmena.overlays.default

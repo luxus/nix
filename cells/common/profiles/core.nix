@@ -70,17 +70,20 @@ in
     duf
     fd
     gdu
-    gh
     git
     home-manager
     htop
     jq
     man
-    neofetch
+    fastfetch
     nodejs_22
+    # ani-cli
+    aria2
+    ffmpeg
+    yt-dlp
     nettools
     doggo
-    nvfetcher
+    # nvfetcher
     ouch
     rclone
     ripgrep

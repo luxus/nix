@@ -142,9 +142,12 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    neovim-nightly-overlay.inputs.nixpkgs.follows = "nixpkgs";
     devenv.url = "github:cachix/devenv";
-    devenv.inputs.nixpkgs.follows = "nixpkgs";
+    # devenv.inputs.nixpkgs.follows = "nixpkgs";
+    sops-nix = {
+      url = "github:mic92/sops-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nvfetcher = {
       url = "github:berberman/nvfetcher";
@@ -167,6 +170,8 @@
     substituters = [
       "https://cache.nixos.org?priority=45"
       "https://colmena.cachix.org?priority=40"
+      "https://devenv.cachix.org?priority=40"
+      "https://luxus.cachix.org?priority=40"
       "https://cuda-maintainers.cachix.org?priority=40"
       "https://hyprland.cachix.org?priority=40"
       "https://nix-community.cachix.org?priority=40"
@@ -175,6 +180,8 @@
     ];
     trusted-substituters = substituters;
     trusted-public-keys = [
+      "devenv.cachix.org-1:w1cLUi8dv3hnoSPGAuibQv+f9TZLr6cv/Hm9XgU50cw="
+      "luxus.cachix.org-1:eW/nJy5bZow2D3wf59qy7a9mfiZNjshIK/BozwgIlLU="
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
       "colmena.cachix.org-1:7BzpDnjjH8ki2CT3f6GdOk7QAzPOl+1t3LvTLXqYcSg="
       "cuda-maintainers.cachix.org-1:0dq3bujKpuEPMCX6U4WylrUDZ9JyUG0VpVZa7CNfq5E="

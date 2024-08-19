@@ -22,7 +22,7 @@
     dragon
     google-chrome
     haruna
-    mpv
+    # mpv
     steam
     vlc
     vscode

@@ -48,6 +48,12 @@ in
           }
           {
             "if" = {
+              app-id = "com.mitchellh.ghostty";
+            }; # mnemonics T - Terminal
+            run = "move-node-to-workspace T";
+          }
+          {
+            "if" = {
               app-id = "net.kovidgoyal.kitty";
             }; # mnemonics T - Terminal
             run = "move-node-to-workspace T";

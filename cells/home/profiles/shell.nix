@@ -67,7 +67,7 @@ with builtins // lib;
       enable = true;
       catppuccin.enable = true;
       extraPackages = with pkgs.bat-extras; [
-        batdiff
+        # batdiff
         batgrep
         batman
         batpipe
@@ -144,10 +144,10 @@ with builtins // lib;
     git = {
       enable = true;
       lfs.enable = true;
-      delta = {
-        catppuccin.enable = true;
-        enable = true;
-      };
+      # delta = {
+      #   catppuccin.enable = true;
+      #   enable = true;
+      # };
       userName = "luxus";
       userEmail = "luxuspur@gmail.com";
       extraConfig = {
@@ -220,6 +220,11 @@ with builtins // lib;
       enable = true;
       catppuccin.enable = true;
     };
+    oh-my-posh = {
+      enable = true;
+      # useTheme = "montys"; #montys
+      settings = builtins.fromTOML (builtins.readFile ./omp.toml);
+    };
     zsh = {
       enable = true;
       autosuggestion.enable = true;
@@ -283,16 +288,16 @@ with builtins // lib;
             sha256 = "sha256-GFHlZjIHUWwyeVoCpszgn4AmLPSSE8UVNfRmisnhkpg=";
           };
         }
-        {
-          name = "powerlevel10k";
-          src = pkgs.zsh-powerlevel10k;
-          file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
-        }
-        {
-          name = "powerlevel10k-config";
-          src = lib.cleanSource ./zsh;
-          file = "p10k.zsh";
-        }
+        # {
+        #   name = "powerlevel10k";
+        #   src = pkgs.zsh-powerlevel10k;
+        #   file = "share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+        # }
+        # {
+        #   name = "powerlevel10k-config";
+        #   src = lib.cleanSource ./zsh;
+        #   file = "p10k.zsh";
+        # }
       ];
       completionInit =
         # bash
@@ -313,7 +318,7 @@ with builtins // lib;
       initExtraBeforeCompInit =
         # bash
         ''
-          P10KP="$XDG_CACHE_HOME/p10k-instant-prompt-''${(%):-%n}.zsh"; [[ ! -r "$P10KP" ]] || source "$P10KP"
+          # P10KP="$XDG_CACHE_HOME/p10k-instant-prompt-''${(%):-%n}.zsh"; [[ ! -r "$P10KP" ]] || source "$P10KP"
 
             # --- zsh data directories ---
             zsh_data="''${XDG_DATA_HOME:-$HOME/.local/share}/zsh"
@@ -414,23 +419,34 @@ with builtins // lib;
       cachix
       du-dust
       gdu
+      jujutsu
+      # nodePackages.wrangler
+      nmap
+      sops
       home-manager
-      mc
+      # mc
       rclone
       rsync
       statix
       thefuck
       w3m
+      nix-tree
+      ast-grep
       mediainfo
       odt2txt
-      delta
-      github-copilot-cli
+      spotify-player
+      # vulnix
+      # dorion
+      # delta
+      # github-copilot-cli
       pueue
       zenith
+      lazygit
       nixpkgs-fmt
       markdown-oxide
       nodejs_22
       devenv
+      croc
     ];
   };
 }
